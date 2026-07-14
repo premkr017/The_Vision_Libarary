@@ -10,6 +10,7 @@
     <a class="navbar-brand" href="{{ route('books.index') }}">📚 The Vision Library</a>
     <a class="nav-link" href="{{ route('books.index') }}">Books</a>
 <a class="nav-link" href="{{ route('members.index') }}">Members</a>
+<a class="nav-link" href="{{ route('issues.index') }}">Issues</a>
   </div>
 </nav>
 <div class="container">

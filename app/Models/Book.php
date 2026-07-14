@@ -3,11 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory; // 👈 Yeh line aapki file mein missing thi, ise add karein
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Book extends Model
 {
-    use HasFactory; // Ab PHP ko pata chal jayega ki yeh trait kahan se aaya hai
+    use HasFactory;
 
     protected $fillable = ['title', 'author', 'isbn', 'quantity', 'description'];
-}
+
+    // 🤝 Yeh relationship function class ke andar hona chahiye (Line 13 se pehle)
+    public function issues()
+    {
+        return $this->hasMany(Issue::class);
+    }
+} // 👈 Class ka closing bracket sabse aakhiri mein aayega!

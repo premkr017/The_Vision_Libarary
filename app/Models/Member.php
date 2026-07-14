@@ -6,12 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Member extends Model
 {
-    $table->id();
-$table->string('name');
-$table->string('phone');
-$table->string('email')->unique()->nullable();
-$table->string('address');
-$table->string('member_id')->unique(); // LIB001 jaise
-$table->timestamps();
-
+    // Yeh line add karne se aap database mein data insert kar paayenge
+    protected $fillable = ['member_id', 'name', 'phone', 'email', 'address'];
 }

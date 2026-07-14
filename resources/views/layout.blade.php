@@ -8,6 +8,8 @@
 <nav class="navbar navbar-dark bg-primary mb-4">
   <div class="container">
     <a class="navbar-brand" href="{{ route('books.index') }}">📚 The Vision Library</a>
+    <a class="nav-link" href="{{ route('books.index') }}">Books</a>
+<a class="nav-link" href="{{ route('members.index') }}">Members</a>
   </div>
 </nav>
 <div class="container">
